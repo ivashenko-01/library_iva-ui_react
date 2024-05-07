@@ -1,0 +1,290 @@
+/* --- Каркас кнопки --- */
+.button {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+
+    min-width: 150px;
+}
+
+/* --- Размер кнопки --- */
+
+.button.small {
+    padding: 4px 10px;
+}
+
+.button.medium {
+    padding: 6px 16px;
+}
+
+.button.large {
+    padding: 8px 22px;
+}
+
+/* --- Расположение текста --- */
+
+.button.left {
+    text-align: left;
+}
+
+.button.center {
+    text-align: center;
+    justify-content: center;
+}
+
+.button.right {
+    text-align: right;
+}
+
+/* --- Во всю ширину блока --- */
+
+.button.stretched {
+    width: 100%;
+}
+
+/* --- Состояние загрузки */
+
+.button .loading {
+    width: 15px;
+    height: 15px;
+
+    border-top: 1px solid #fff;
+    border-left: 1px solid #fff;
+
+    border-radius: 100%;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    -ms-border-radius: 100%;
+    -o-border-radius: 100%;
+
+    animation-name: rotation;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* --- Элементы до и после --- */
+.button .before {
+    width: 16px;
+    height: 16px;
+}
+
+.button .after {
+    width: 16px;
+    height: 16px;
+}
+
+/* --- Тип кнопки  и внешность --- */
+
+.button.accent-fill {
+    color: #fff;
+    background-color: var(--iva--color_background_accent);
+}
+
+.button.accent-gray-fill {
+    color: var(--iva--color_text_accent);
+    background-color: var(--iva--color_background_secondary_alpha);
+}
+
+.button.accent-transparent {
+    color: var(--iva--color_background_accent);
+}
+
+.button.accent-border {
+    border: 1px solid var(--iva--color_stroke_accent);
+    color: var(--iva--color_text_accent);
+}
+
+.button.accent-fill:hover {
+    color: #fff;
+    background-color: var(--iva--color_background_accent--hover);
+}
+
+.button.accent-gray-fill:hover {
+    color: var(--iva--color_text_accent--hover);
+    background-color: var(--iva--color_background_secondary_alpha--hover);
+}
+
+.button.accent-transparent:hover {
+    color: var(--iva--color_text_accent--hover);
+    background-color: var(--iva--color_background_secondary_alpha--hover);
+}
+
+.button.accent-border:hover {
+    border: 1px solid var(--iva--color_stroke_accent--hover);
+    color: var(--iva--color_text_accent--hover);
+    background-color: var(--iva--color_background_secondary_alpha--hover);
+}
+
+.button.accent-gray-fill .loading,
+.button.accent-transparent .loading,
+.button.accent-border .loading {
+    border-top: 1px solid var(--iva--color_background_accent);
+    border-left: 1px solid var(--iva--color_background_accent);
+}
+
+/* ---- */
+
+.button.positive-fill {
+    color: #fff;
+    background-color: var(--iva--color_background_positive);
+}
+
+.button.positive-gray-fill {
+    color: var(--iva--color_background_positive);
+    background-color: var(--iva--color_background_secondary_alpha);
+}
+
+.button.positive-transparent {
+    color: var(--iva--color_background_positive);
+}
+
+.button.positive-border {
+    border: 1px solid var(--iva--color_stroke_positive);
+    color: var(--iva--color_background_positive);
+}
+
+.button.positive-fill:hover {
+    color: #fff;
+    background-color: var(--iva--color_background_positive--hover);
+}
+
+.button.positive-gray-fill:hover {
+    color: var(--iva--color_background_positive--hover);
+    background-color: var(--iva--color_background_secondary_alpha--hover);
+}
+
+.button.positive-transparent:hover {
+    color: var(--iva--color_background_positive--hover);
+    background-color: var(--iva--color_background_secondary_alpha--hover);
+}
+
+.button.positive-border:hover {
+    border: 1px solid var(--iva--color_stroke_positive--hover);
+    color: var(--iva--color_background_positive--hover);
+    background-color: var(--iva--color_background_secondary_alpha--hover);
+}
+
+.button.positive-gray-fill .loading,
+.button.positive-transparent .loading,
+.button.positive-border .loading {
+    border-top: 1px solid var(--iva--color_background_positive);
+    border-left: 1px solid var(--iva--color_background_positive);
+}
+
+/* ---- */
+
+.button.negative-fill {
+    color: #fff;
+    background-color: var(--iva--color_background_negative);
+}
+
+.button.negative-gray-fill {
+    color: var(--iva--color_background_negative);
+    background-color: var(--iva--color_background_secondary_alpha);
+}
+
+.button.negative-transparent {
+    color: var(--iva--color_background_negative);
+}
+
+.button.negative-border {
+    border: 1px solid var(--iva--color_stroke_negative);
+    color: var(--iva--color_background_negative);
+}
+
+.button.negative-fill:hover {
+    color: #fff;
+    background-color: var(--iva--color_background_negative--hover);
+}
+
+.button.negative-gray-fill:hover {
+    color: var(--iva--color_background_negative--hover);
+    background-color: #ced0d4;
+}
+
+.button.negative-transparent:hover {
+    color: var(--iva--color_background_negative--hover);
+    background-color: #e8eaee;
+}
+
+.button.negative-border:hover {
+    border: 1px solid var(--iva--color_stroke_negative--hover);
+    color: var(--iva--color_background_negative--hover);
+    background-color: #e8eaee;
+}
+
+.button.negative-gray-fill .loading,
+.button.negative-transparent .loading,
+.button.negative-border .loading {
+    border-top: 1px solid var(--iva--color_background_negative);
+    border-left: 1px solid var(--iva--color_background_negative);
+}
+
+/* ---- */
+
+.button.neutral-fill {
+    color: #000;
+    background-color: var(--iva--color_background_secondary);
+}
+
+.button.neutral-gray-fill {
+    color: #000;
+    background-color: var(--iva--color_background_secondary);
+}
+
+.button.neutral-transparent {
+    color: #000;
+}
+
+.button.neutral-border {
+    border: 1px solid var(--iva--color_background_secondary);
+    color: #000;
+}
+
+.button.neutral-fill:hover {
+    color: #000;
+    background-color: var(--iva--color_background_secondary--hover);
+}
+
+.button.neutral-gray-fill:hover {
+    color: #000;
+    background-color: var(--iva--color_background_secondary--hover);
+}
+
+.button.neutral-transparent:hover {
+    color: #000;
+    background-color: var(--iva--color_background_secondary--hover);
+}
+
+.neutral-border:hover {
+    color: #000;
+    background-color: var(--iva--color_background_secondary--hover);
+}
+
+.button.neutral-fill .loading,
+.button.neutral-gray-fill .loading,
+.button.neutral-transparent .loading,
+.button.neutral-border .loading {
+    border-top: 1px solid var(--iva--color_icon_secondary);
+    border-left: 1px solid var(--iva--color_icon_secondary);
+}
+
+/* --- Неактивное состояние --- */
+.button.disabled {
+    opacity: 0.5;
+}
+
+.button:hover.disabled {
+    opacity: 0.5;
+}
