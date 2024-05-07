@@ -283,6 +283,7 @@
 /* --- Неактивное состояние --- */
 .button.disabled {
     opacity: 0.5;
+    cursor: default;
 }
 
 .button:hover.disabled {
