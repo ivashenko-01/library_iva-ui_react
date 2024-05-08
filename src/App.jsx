@@ -1,69 +1,75 @@
+import './styles/app.css';
+
 import { useState } from 'react';
 
-import { Button } from './shared/ui/Button';
+import { Input } from './shared/ui/Input';
 
 function App() {
-    const onClick = () => {
-        alert('Кнопка нажата');
+    // --- Состояние ---
+    const [disabled, setDisabled] = useState(false);
+    const [isError, setIsError] = useState(false);
+    const [isValid, setIsValid] = useState(false);
+
+    // --- Значение ---
+    const [value, setValue] = useState('Евгений');
+
+    // --- Системный атрибут ---
+    const [forName, setForName] = useState('nameUser');
+
+    // --- Контролируемое значение ---
+    const onChangeValue = (e) => {
+        setValue(e);
     };
 
-    // --- Выравнивание текста
-    const [align, setAlign] = useState('center');
+    // --- Состояние label ---
+    const [enabledLabel, setEnabledLabel] = useState(true);
 
-    // --- Наличие текста
-    const [addText, setAddText] = useState(true);
-
-    // --- Процесс загрузки
-    const [loading, setLoading] = useState(false);
-    const [loadingIcon, setLoadingIcon] = useState(false);
-
-    // --- Тип и внешность кнопки
-    const [appearance, setAppearance] = useState('accent-fill');
-
-    // --- Неактивность кнопки
-    const [disabled, setDisabled] = useState(false);
-
-    // --- Размер кноки
-    const [sizeButton, setSizeButton] = useState('large');
-
-    // --- На всю ширину кнопки
-    const [stretched, setStretched] = useState(false);
+    // --- Расположение текста ---
+    const [align, setAlign] = useState('left');
 
     // --- Элемент в начале и в конце кноки
     const [isBefore, setIsBefore] = useState(false);
     const [isAfter, setIsAfter] = useState(false);
+    const [isAfterButton, setIsAfterButtton] = useState(true);
 
     const [addBefore, setAddBefore] = useState(
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M13 19H19V9.97815L12 4.53371L5 9.97815V19H11V13H13V19ZM21 20C21 20.5523 20.5523 21 20 21H4C3.44772 21 3 20.5523 3 20V9.48907C3 9.18048 3.14247 8.88917 3.38606 8.69972L11.3861 2.47749C11.7472 2.19663 12.2528 2.19663 12.6139 2.47749L20.6139 8.69972C20.8575 8.88917 21 9.18048 21 9.48907V20Z"></path>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
+            <path d="M12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22ZM12 20C16.4183 20 20 16.4183 20 12C20 7.58172 16.4183 4 12 4C7.58172 4 4 7.58172 4 12C4 16.4183 7.58172 20 12 20ZM12 10.5858L14.8284 7.75736L16.2426 9.17157L13.4142 12L16.2426 14.8284L14.8284 16.2426L12 13.4142L9.17157 16.2426L7.75736 14.8284L10.5858 12L7.75736 9.17157L9.17157 7.75736L12 10.5858Z"></path>
         </svg>,
     );
     const [addAfter, setAddAfter] = useState(
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M13 19H19V9.97815L12 4.53371L5 9.97815V19H11V13H13V19ZM21 20C21 20.5523 20.5523 21 20 21H4C3.44772 21 3 20.5523 3 20V9.48907C3 9.18048 3.14247 8.88917 3.38606 8.69972L11.3861 2.47749C11.7472 2.19663 12.2528 2.19663 12.6139 2.47749L20.6139 8.69972C20.8575 8.88917 21 9.18048 21 9.48907V20Z"></path>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
+            <path d="M12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22ZM12 20C16.4183 20 20 16.4183 20 12C20 7.58172 16.4183 4 12 4C7.58172 4 4 7.58172 4 12C4 16.4183 7.58172 20 12 20ZM12 10.5858L14.8284 7.75736L16.2426 9.17157L13.4142 12L16.2426 14.8284L14.8284 16.2426L12 13.4142L9.17157 16.2426L7.75736 14.8284L10.5858 12L7.75736 9.17157L9.17157 7.75736L12 10.5858Z"></path>
+        </svg>,
+    );
+
+    const [addAfterButton, setAddAfterButton] = useState(
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
+            <path d="M12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22ZM12 20C16.4183 20 20 16.4183 20 12C20 7.58172 16.4183 4 12 4C7.58172 4 4 7.58172 4 12C4 16.4183 7.58172 20 12 20ZM12 10.5858L14.8284 7.75736L16.2426 9.17157L13.4142 12L16.2426 14.8284L14.8284 16.2426L12 13.4142L9.17157 16.2426L7.75736 14.8284L10.5858 12L7.75736 9.17157L9.17157 7.75736L12 10.5858Z"></path>
         </svg>,
     );
 
     return (
         <>
-            <div>
-                <Button
-                    onClick={onClick}
-                    appearance={appearance}
-                    align={align}
-                    stretched={stretched}
+            <div className="app">
+                <Input
+                    forName={forName}
+                    value={value}
                     disabled={disabled}
-                    sizeButton={sizeButton}
-                    loading={loading}
-                    loadingIcon={loadingIcon}
+                    onChangeValue={onChangeValue}
+                    enabledLabel={enabledLabel}
+                    align={align}
                     isBefore={isBefore}
                     isAfter={isAfter}
+                    isAfterButton={isAfterButton}
                     addBefore={addBefore}
                     addAfter={addAfter}
-                    addText={addText}
+                    addAfterButton={addAfterButton}
+                    isError={isError}
+                    isValid={isValid}
                 >
-                    Кнопка
-                </Button>
+                    Имя
+                </Input>
             </div>
         </>
     );

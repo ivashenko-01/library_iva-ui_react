@@ -1,106 +1,107 @@
 :root {
-
     /* --- Цвет текста --- */
     --iva--color_text_accent: #2688eb;
-	--iva--color_text_accent--hover: #2483E4;
-	--iva--color_text_accent--active: #237EDD;
-	--iva--color_text_accent_themed: #2688eb;
-	--iva--color_text_accent_themed--hover: #2483E4;
-	--iva--color_text_accent_themed--active: #237EDD;
+    --iva--color_text_accent--hover: #2483e4;
+    --iva--color_text_accent--active: #237edd;
+    --iva--color_text_accent_themed: #2688eb;
+    --iva--color_text_accent_themed--hover: #2483e4;
+    --iva--color_text_accent_themed--active: #237edd;
 
     --iva--color_text_positive: #4bb34b;
-	--iva--color_text_positive--hover: #48AC4A;
-	--iva--color_text_positive--active: #45A64A;
+    --iva--color_text_positive--hover: #48ac4a;
+    --iva--color_text_positive--active: #45a64a;
 
-	--iva--color_text_negative: #e64646;
-	--iva--color_text_negative--hover: #DD4446;
-	--iva--color_text_negative--active: #D44245;
+    --iva--color_text_negative: #e64646;
+    --iva--color_text_negative--hover: #dd4446;
+    --iva--color_text_negative--active: #d44245;
 
     --iva--color_text_secondary: #818c99;
-	--iva--color_text_secondary--hover: #7C8795;
-	--iva--color_text_secondary--active: #778292;
+    --iva--color_text_secondary--hover: #7c8795;
+    --iva--color_text_secondary--active: #778292;
 
     /* --- Цвет фона --- */
     --iva--color_background_accent: #2688eb;
-	--iva--color_background_accent--hover: #2483E4;
-	--iva--color_background_accent--active: #237EDD;
-	--iva--color_background_accent_themed: #2688eb;
-	--iva--color_background_accent_themed--hover: #2483E4;
-	--iva--color_background_accent_themed--active: #237EDD;
-	--iva--color_background_accent_themed_alpha: rgba(38, 136, 235, 0.2);
-	--iva--color_background_accent_themed_alpha--hover: rgba(38, 136, 235, 0.24);
-	--iva--color_background_accent_themed_alpha--active: rgba(38, 136, 235, 0.28);
-	--iva--color_background_accent_tint: #5a9eff;
-	--iva--color_background_accent_tint--hover: #5698F7;
-	--iva--color_background_accent_tint--active: #5393EF;
-	--iva--color_background_accent_alternative: #2688EB;
-	--iva--color_background_accent_alternative--hover: #2483E4;
-	--iva--color_background_accent_alternative--active: #237EDD;
+    --iva--color_background_accent--hover: #2483e4;
+    --iva--color_background_accent--active: #237edd;
+    --iva--color_background_accent_themed: #2688eb;
+    --iva--color_background_accent_themed--hover: #2483e4;
+    --iva--color_background_accent_themed--active: #237edd;
+    --iva--color_background_accent_themed_alpha: rgba(38, 136, 235, 0.2);
+    --iva--color_background_accent_themed_alpha--hover: rgba(38, 136, 235, 0.24);
+    --iva--color_background_accent_themed_alpha--active: rgba(38, 136, 235, 0.28);
+    --iva--color_background_accent_tint: #5a9eff;
+    --iva--color_background_accent_tint--hover: #5698f7;
+    --iva--color_background_accent_tint--active: #5393ef;
+    --iva--color_background_accent_alternative: #2688eb;
+    --iva--color_background_accent_alternative--hover: #2483e4;
+    --iva--color_background_accent_alternative--active: #237edd;
 
     --iva--color_background_warning: #fff2d6;
-	--iva--color_background_warning--hover: #F5E9D0;
-	--iva--color_background_warning--active: #EBE0CA;
+    --iva--color_background_warning--hover: #f5e9d0;
+    --iva--color_background_warning--active: #ebe0ca;
 
-	--iva--color_background_positive: #4bb34b;
-	--iva--color_background_positive--hover: #48AC4A;
-	--iva--color_background_positive--active: #45A64A;
+    --iva--color_background_positive: #4bb34b;
+    --iva--color_background_positive--hover: #48ac4a;
+    --iva--color_background_positive--active: #45a64a;
 
-	--iva--color_background_negative: #e64646;
-	--iva--color_background_negative--hover: #DD4446;
-	--iva--color_background_negative--active: #D44245;
+    --iva--color_background_negative: #e64646;
+    --iva--color_background_negative--hover: #dd4446;
+    --iva--color_background_negative--active: #d44245;
 
-	--iva--color_background_negative_tint: #faebeb;
-	--iva--color_background_negative_tint--hover: #F0E2E4;
-	--iva--color_background_negative_tint--active: #E6D9DD;
-	--iva--color_background_positive_tint: #e8f9e8;
-	--iva--color_background_positive_tint--hover: #DFF0E1;
-	--iva--color_background_positive_tint--active: #D5E6DA;
+    --iva--color_background_negative_tint: #faebeb;
+    --iva--color_background_negative_tint--hover: #f0e2e4;
+    --iva--color_background_negative_tint--active: #e6d9dd;
+    --iva--color_background_positive_tint: #e8f9e8;
+    --iva--color_background_positive_tint--hover: #dff0e1;
+    --iva--color_background_positive_tint--active: #d5e6da;
 
     --iva--color_background_secondary: #f5f5f5;
-	--iva--color_background_secondary--hover: #EBECEE;
-	--iva--color_background_secondary--active: #E1E3E6;
-	--iva--color_background_secondary_alpha: rgba(0, 0, 0, 0.04);
-	--iva--color_background_secondary_alpha--hover: rgba(0, 0, 0, 0.08);
-	--iva--color_background_secondary_alpha--active: rgba(0, 0, 0, 0.12);
+    --iva--color_background_secondary--hover: #ebecee;
+    --iva--color_background_secondary--active: #e1e3e6;
+    --iva--color_background_secondary_alpha: rgba(0, 0, 0, 0.04);
+    --iva--color_background_secondary_alpha--hover: rgba(0, 0, 0, 0.08);
+    --iva--color_background_secondary_alpha--active: rgba(0, 0, 0, 0.12);
+
+    --iva--color_field_background: #f2f3f5;
 
     /* --- Цвет иконок --- */
 
     --iva--color_icon_accent: #2688eb;
-	--iva--color_icon_accent--hover: #2483E4;
-	--iva--color_icon_accent--active: #237EDD;
-	--iva--color_icon_accent_themed: #2688eb;
-	--iva--color_icon_accent_themed--hover: #2483E4;
-	--iva--color_icon_accent_themed--active: #237EDD;
+    --iva--color_icon_accent--hover: #2483e4;
+    --iva--color_icon_accent--active: #237edd;
+    --iva--color_icon_accent_themed: #2688eb;
+    --iva--color_icon_accent_themed--hover: #2483e4;
+    --iva--color_icon_accent_themed--active: #237edd;
 
     --iva--color_icon_positive: #4bb34b;
-	--iva--color_icon_positive--hover: #48AC4A;
-	--iva--color_icon_positive--active: #45A64A;
+    --iva--color_icon_positive--hover: #48ac4a;
+    --iva--color_icon_positive--active: #45a64a;
 
-	--iva--color_icon_negative: #e64646;
-	--iva--color_icon_negative--hover: #DD4446;
-	--iva--color_icon_negative--active: #D44245;
+    --iva--color_icon_negative: #e64646;
+    --iva--color_icon_negative--hover: #dd4446;
+    --iva--color_icon_negative--active: #d44245;
 
     --iva--color_icon_secondary: #99a2ad;
-	--iva--color_icon_secondary--hover: #939CA9;
-	--iva--color_icon_secondary--active: #8D96A4;
-	--iva--color_icon_secondary_alpha: rgba(0, 0, 0, 0.36);
-	--iva--color_icon_secondary_alpha--hover: rgba(0, 0, 0, 0.4);
-	--iva--color_icon_secondary_alpha--active: rgba(0, 0, 0, 0.44);
+    --iva--color_icon_secondary--hover: #939ca9;
+    --iva--color_icon_secondary--active: #8d96a4;
+    --iva--color_icon_secondary_alpha: rgba(0, 0, 0, 0.36);
+    --iva--color_icon_secondary_alpha--hover: rgba(0, 0, 0, 0.4);
+    --iva--color_icon_secondary_alpha--active: rgba(0, 0, 0, 0.44);
 
     /* --- Цвет обводки --- */
 
     --iva--color_stroke_accent: #2688eb;
-	--iva--color_stroke_accent--hover: #2483E4;
-	--iva--color_stroke_accent--active: #237EDD;
-	--iva--color_stroke_accent_themed: #2688eb;
-	--iva--color_stroke_accent_themed--hover: #2483E4;
-	--iva--color_stroke_accent_themed--active: #237EDD;
+    --iva--color_stroke_accent--hover: #2483e4;
+    --iva--color_stroke_accent--active: #237edd;
+    --iva--color_stroke_accent_themed: #2688eb;
+    --iva--color_stroke_accent_themed--hover: #2483e4;
+    --iva--color_stroke_accent_themed--active: #237edd;
 
     --iva--color_stroke_positive: #4bb34b;
-	--iva--color_stroke_positive--hover: #48AC4A;
-	--iva--color_stroke_positive--active: #45A64A;
+    --iva--color_stroke_positive--hover: #48ac4a;
+    --iva--color_stroke_positive--active: #45a64a;
 
-	--iva--color_stroke_negative: #e64646;
-	--iva--color_stroke_negative--hover: #DD4446;
-	--iva--color_stroke_negative--active: #D44245;
+    --iva--color_stroke_negative: #e64646;
+    --iva--color_stroke_negative--hover: #dd4446;
+    --iva--color_stroke_negative--active: #d44245;
 }
