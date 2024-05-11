@@ -1,10 +1,10 @@
-import './styles/app.css';
+## Импорт
 
-import { useState } from 'react';
+`import { Select } from './shared/ui/Select/ui/Select';`
 
-import { Select } from './shared/ui/Select/ui/Select';
+## Состояния
 
-function App() {
+```
     // --- Контролируемое значение ввода ---
     const [value, setValue] = useState();
 
@@ -61,33 +61,29 @@ function App() {
 
     // --- Передача описания ошибок ---
     const [listError, setListError] = useState(['Пункт 1', 'Пункт 2', 'Пункт 3', 'Пункт 4', 'Пункт 5', 'Пункт 6']);
+```
 
-    return (
-        <>
-            <div className="app">
-                <Select
-                    value={value}
-                    onChangeValue={onChangeValue}
-                    forName={forName}
-                    stretched={stretched}
-                    disabled={disabled}
-                    type={type}
-                    list={list}
-                    toggleMenu={toggleMenu}
-                    handleToggleMenu={handleToggleMenu}
-                    onClickSelectMenuItem={onClickSelectMenuItem}
-                    statusAddButton={statusAddButton}
-                    onClickAddButton={onClickAddButton}
-                    isIconAfter={isIconAfter}
-                    iconAfter={iconAfter}
-                    isError={isError}
-                    listError={listError}
-                >
-                    ФИО сотрудника
-                </Select>
-            </div>
-        </>
-    );
-}
+## Вызов компонента
 
-export default App;
+```
+    <Select
+        value={value}
+        onChangeValue={onChangeValue}
+        forName={forName}
+        stretched={stretched}
+        disabled={disabled}
+        type={type}
+        list={list}
+        toggleMenu={toggleMenu}
+        handleToggleMenu={handleToggleMenu}
+        onClickSelectMenuItem={onClickSelectMenuItem}
+        statusAddButton={statusAddButton}
+        onClickAddButton={onClickAddButton}
+        isIconAfter={isIconAfter}
+        iconAfter={iconAfter}
+        isError={isError}
+        listError={listError}
+    >
+        ФИО сотрудника
+    </Select>
+```
