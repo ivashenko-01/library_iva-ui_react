@@ -1,10 +1,10 @@
-import './styles/app.css';
+## Импорт
 
-import { useState } from 'react';
+`import { Radio } from './shared/ui/Radio';`
 
-import { Radio } from './shared/ui/Radio';
+## Состояния
 
-function App() {
+```
     // --- Список вариантов ---
     const [list, setList] = useState([
         { name: 'Пункт 1', description: 'Описание пункта 1', disabled: false },
@@ -23,14 +23,10 @@ function App() {
 
     // --- Растянуть на всю ширину ---
     const [stretched, setStretched] = useState(false);
+```
 
-    return (
-        <>
-            <div className="app">
-                <Radio list={list} name={name} value={value} changeValue={changeValue} stretched={stretched}></Radio>
-            </div>
-        </>
-    );
-}
+## Вызов компонента
 
-export default App;
+```
+    <Radio list={list} name={name} value={value} changeValue={changeValue} stretched={stretched}></Radio>
+```
